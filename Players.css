@@ -1,0 +1,36 @@
+playerInfo{
+font-size: 80%;
+margin: 0.5em;
+font-family: Verdana;
+}
+
+player{
+	display:block;
+	border: 1px solid silver;
+	margin: 0.5em;
+	padding: 0.5em;
+	background-color:cyan;
+}
+
+name, surename, team, position, ppg {
+	display: block;
+	
+}
+
+name {
+	
+	color : red;
+	text-decoration: underline;
+}
+surename{
+	color: green;
+}
+team{
+	color: blue;
+}
+position{
+	color:black;
+}
+ppg{
+	color:white;
+}
