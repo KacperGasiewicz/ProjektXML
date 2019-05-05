@@ -3,8 +3,14 @@ font-size: 80%;
 margin: 0.5em;
 font-family: Verdana;
 background-color : gray; 
+counter-reset: player;
 
 }
+
+[href$=".pdf"]::after{
+    content: " " url("pdficon.png");
+}
+
 heading{
 	
 	 left: 0;
@@ -21,7 +27,7 @@ heading{
 	 display: inline-block;
 	text-align:center;
 	font-family:Bebas;
-	border:2px solid orange; border-radius: 50px;
+	border:2px solid orange; border-radius: 100px;
 	border-style: solid;
 	 background-color : powderblue; 
 	 font-weight:bold;
@@ -48,9 +54,15 @@ player[teamname='San Antonio Spurs']:hover{
     padding: 5px;
     background-color: #9DDB5F;
 	display: inline-block;
+	
 }
 
 
+
+player::before {
+  counter-increment: player;
+  content: "Player " counter(player) ": ";
+}
 name, surename, team, position, ppg {
 	display: block;
 	font-weight: bold;
