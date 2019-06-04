@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="players.css"?>
+<NBA pelna_nazwa="Nation Basketball Association">
+  <informacje_o_druzynie>
+    <team>Raptors</team>
+    <miasto>Toronto</miasto>
+    <dywizja>wschodnia</dywizja>
+    <Najlepszy_Gracz>Demare DeRozan</Najlepszy_Gracz>
+    <numer>10</numer>
+	<dataDolaczenia>1995-05-10</dataDolaczenia>
+    <zarobki>24170000</zarobki>
+  </informacje_o_druzynie>
+  <statystyki_graczy>
+    <staty team="OKC">  
+     <gracz>Russel Westbrook</gracz>
+	 <czyPlayoffy>true</czyPlayoffy>
+     <punkty_na_mecz>30.2</punkty_na_mecz>
+     <zbiorki_na_mecz>11.3</zbiorki_na_mecz>
+      <asysty_na_mecz>12</asysty_na_mecz>  
+    </staty>
+    <staty team="LAC">
+      <gracz>Blake Griffin</gracz>
+	  <czyPlayoffy>false</czyPlayoffy>
+	  <punkty_na_mecz>17</punkty_na_mecz>
+      <zbiorki_na_mecz>16.8</zbiorki_na_mecz>
+      <asysty_na_mecz>7.5</asysty_na_mecz>
+    </staty>
+    <staty team="SAS">
+      <gracz>Kawhi Leonard</gracz>
+      <punkty_na_mecz>22</punkty_na_mecz>
+	  <czyPlayoffy>true</czyPlayoffy>
+      <zbiorki_na_mecz>8</zbiorki_na_mecz>
+      <asysty_na_mecz>11</asysty_na_mecz>
+    </staty>
+  </statystyki_graczy>
+  <statystyki_druzyny>
+    <staty2>
+      <nazwa_druzyny>GSW</nazwa_druzyny>
+      <wygrane>15</wygrane>
+      <przegrane>3</przegrane>
+    </staty2>
+    <staty2>
+      <nazwa_druzyny>Boston Celtics</nazwa_druzyny>
+      <wygrane>7</wygrane>
+      <przegrane>10</przegrane>
+    </staty2>
+    <staty2>
+      <nazwa_druzyny>Charlotte Hornets</nazwa_druzyny>
+      <wygrane>12</wygrane>
+      <przegrane>6</przegrane>
+    </staty2>
+  </statystyki_druzyny>
+  <gracze>
+    <gracz>
+      <imie_i_nazwisko>Marcin Gortat</imie_i_nazwisko>
+      <pochodzenie>Polska</pochodzenie>
+      <rok_draftu>2005</rok_draftu>
+      <druzyna_draftu>Orlando Magic</druzyna_draftu>
+    </gracz>
+    <gracz>
+      <imie_i_nazwisko>Joel Embiid</imie_i_nazwisko>
+      <pochodzenie>Kamerun</pochodzenie>
+      <rok_draftu>2014</rok_draftu>
+      <druzyna_draftu>Philadelphia 76'ers</druzyna_draftu>
+    </gracz>
+  </gracze>
+  <informacje_o_drafcie>
+    <drafty>
+      <rok_draftu>2016</rok_draftu>
+      <nr1>Ben Simmons</nr1>
+    </drafty>
+    <drafty>
+      <rok_draftu>2015</rok_draftu>
+      <nr1>Karl Antony Towns</nr1>
+    </drafty>
+  </informacje_o_drafcie>
+  <informajcje_o_mistrzostwach>
+    <iom>
+      <druzyna>LAL</druzyna>
+      <rok_mistrzostwa>2010</rok_mistrzostwa>
+    </iom>
+
+  </informajcje_o_mistrzostwach>
+</NBA>

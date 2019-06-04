@@ -1,0 +1,141 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<xsd:annotation>
+  <xsd:documentation xml:lang="pl">
+  </xsd:documentation>
+</xsd:annotation>
+ <xsd:element name="NBA" type="NBA_typ"/>
+  <xsd:complexType name="NBA_typ">
+    <xsd:sequence>
+      <xsd:element name="informacje_o_druzynie" type="informacje_o_druzynie_typ"/>
+      <xsd:element name="statystyki_graczy" type="statystyki_graczy_typ"/>
+      <xsd:element name="statystyki_druzyny" type="statystyki_druzyny_typ"/>
+      <xsd:element name="gracze" type="gracze_typ"/>
+      <xsd:element name="informacje_o_drafcie" type="informacje_o_drafcie_typ"/>
+      <xsd:element name="informajcje_o_mistrzostwach" type="informajcje_o_mistrzostwach_typ"/>
+ </xsd:sequence>
+    <xsd:attribute name="pelna_nazwa" type="xsd:string"/>
+  </xsd:complexType> 
+  <xsd:complexType name="informacje_o_druzynie_typ">
+     <xsd:sequence>
+    <xsd:element name="team" type="xsd:string"/>
+    <xsd:element name="miasto" type="xsd:string"/>
+    <xsd:element name="dywizja" type="xsd:string"/>
+    <xsd:element name="Najlepszy_Gracz" type="xsd:string"/>
+    <xsd:element name="numer" type="numer_typ"/>
+    <xsd:element name="dataDolaczenia" type="xsd:date"/>	
+    <xsd:element name="zarobki" type="zarobki_typ"/>
+    </xsd:sequence>
+</xsd:complexType>
+  <xsd:complexType name="statystyki_graczy_typ" mixed="true">
+  <xsd:sequence>
+    <xsd:element name="staty" minOccurs="0" maxOccurs="unbounded">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="gracz" type="xsd:string"/>
+		   <xsd:element name="czyPlayoffy" type="xsd:boolean"/>
+          <xsd:element name="punkty_na_mecz" type="xsd:float"/>
+          <xsd:element name="zbiorki_na_mecz" type="zbiorki_na_mecz_typ"/>
+          <xsd:element name="asysty_na_mecz" type="xsd:float"/>
+        </xsd:sequence>
+		<xsd:attribute name="team" type="xsd:string"/>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+ </xsd:complexType>
+  <xsd:complexType name="statystyki_druzyny_typ">
+    <xsd:sequence>
+      <xsd:element name="staty2" minOccurs="0" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="nazwa_druzyny" type="xsd:string"/>
+            <xsd:element name="wygrane" type="xsd:int"/>
+            <xsd:element name="przegrane" type="xsd:int"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="gracze_typ">
+  <xsd:sequence>
+    <xsd:element name="gracz" minOccurs="0" maxOccurs="unbounded">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="imie_i_nazwisko" type="xsd:string"/>
+          <xsd:element name="pochodzenie" type="pochodzenie_typ"/>
+          <xsd:element name="rok_draftu" type="rok_draftu_typ"/>
+          <xsd:element name="druzyna_draftu" type="xsd:string"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="informacje_o_drafcie_typ">
+    <xsd:sequence>
+      <xsd:element name="drafty" minOccurs="1" maxOccurs="unbounded">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="rok_draftu" type="xsd:int"/>
+            <xsd:element name="nr1" type="nr1_typ"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="informajcje_o_mistrzostwach_typ">
+  <xsd:sequence>
+    <xsd:element name="iom" minOccurs="1" maxOccurs="unbounded">
+      <xsd:complexType>
+        <xsd:sequence>
+          <xsd:element name="druzyna" type="druzyna_typ"/>
+          <xsd:element name="rok_mistrzostwa" type="xsd:int"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="zarobki_typ">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minExclusive value="0"/>
+      <xsd:maxExclusive value="50000000"/>
+    </xsd:restriction>
+  </xsd:simpleType> 
+  <xsd:simpleType name="zbiorki_na_mecz_typ">
+    <xsd:restriction base="xsd:float">
+      <xsd:minExclusive value="0"/>
+      <xsd:maxExclusive value="25"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="rok_draftu_typ">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="1946"/>
+      <xsd:maxInclusive value="2016"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="nr1_typ">
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1"/>
+      <xsd:maxLength value="40"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="numer_typ">
+    <xsd:restriction base="xsd:integer">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxExclusive value="100"/>
+    </xsd:restriction>
+	  <xsd:simpleType name="druzyna_typ">
+    <xsd:restriction base="xsd:string">
+           <xs:pattern value="[a-z]{3,3}"/>	 
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="pochodzenie_typ">
+    <xs:choice>
+  <xs:element ref="Europa"/>
+    <xs:element ref="Afryka"/>
+  <xs:element ref="USA"/>
+  <xs:element ref="Australia"/>
+    </xs:choice>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+</xsd:schema>

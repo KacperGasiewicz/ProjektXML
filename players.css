@@ -1,0 +1,32 @@
+NBA{
+font-size: 80%;
+margin: 0.5em;
+font-family: Verdana;
+background-color : gray; 
+counter-reset: player;
+background-attachment: fixed;
+}
+
+
+
+
+statystyki_graczy{
+	 box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+
+statystyki_graczy{
+	 box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);   
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+}
+
+
