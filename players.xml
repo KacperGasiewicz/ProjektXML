@@ -25,10 +25,17 @@
       <zbiorki_na_mecz>16.8</zbiorki_na_mecz>
       <asysty_na_mecz>7.5</asysty_na_mecz>
     </staty>
+	 <staty>
+      <gracz>Kyle Lowri</gracz>
+	  <czyPlayoffy>false</czyPlayoffy>
+	  <punkty_na_mecz>12</punkty_na_mecz>
+      <zbiorki_na_mecz>11.8</zbiorki_na_mecz>
+      <asysty_na_mecz>14.4</asysty_na_mecz>
+    </staty>
     <staty team="SAS">
       <gracz>Kawhi Leonard</gracz>
-      <punkty_na_mecz>22</punkty_na_mecz>
 	  <czyPlayoffy>true</czyPlayoffy>
+      <punkty_na_mecz>22</punkty_na_mecz>
       <zbiorki_na_mecz>8</zbiorki_na_mecz>
       <asysty_na_mecz>11</asysty_na_mecz>
     </staty>
@@ -53,13 +60,13 @@
   <gracze>
     <gracz>
       <imie_i_nazwisko>Marcin Gortat</imie_i_nazwisko>
-      <pochodzenie>Polska</pochodzenie>
+      <pochodzenie>Europa</pochodzenie>
       <rok_draftu>2005</rok_draftu>
       <druzyna_draftu>Orlando Magic</druzyna_draftu>
     </gracz>
     <gracz>
       <imie_i_nazwisko>Joel Embiid</imie_i_nazwisko>
-      <pochodzenie>Kamerun</pochodzenie>
+      <pochodzenie>Afryka</pochodzenie>
       <rok_draftu>2014</rok_draftu>
       <druzyna_draftu>Philadelphia 76'ers</druzyna_draftu>
     </gracz>
@@ -79,6 +86,5 @@
       <druzyna>LAL</druzyna>
       <rok_mistrzostwa>2010</rok_mistrzostwa>
     </iom>
-
   </informajcje_o_mistrzostwach>
 </NBA>

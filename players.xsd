@@ -13,7 +13,7 @@
       <xsd:element name="informacje_o_drafcie" type="informacje_o_drafcie_typ"/>
       <xsd:element name="informajcje_o_mistrzostwach" type="informajcje_o_mistrzostwach_typ"/>
  </xsd:sequence>
-    <xsd:attribute name="pelna_nazwa" type="xsd:string"/>
+    <xsd:attribute name="pelna_nazwa" type="xsd:string" use="required"/>
   </xsd:complexType> 
   <xsd:complexType name="informacje_o_druzynie_typ">
      <xsd:sequence>
@@ -37,7 +37,7 @@
           <xsd:element name="zbiorki_na_mecz" type="zbiorki_na_mecz_typ"/>
           <xsd:element name="asysty_na_mecz" type="xsd:float"/>
         </xsd:sequence>
-		<xsd:attribute name="team" type="xsd:string"/>
+		<xsd:attribute name="team" type="xsd:string" default="unsigned"/>
       </xsd:complexType>
     </xsd:element>
   </xsd:sequence>
@@ -46,11 +46,11 @@
     <xsd:sequence>
       <xsd:element name="staty2" minOccurs="0" maxOccurs="unbounded">
         <xsd:complexType>
-          <xsd:sequence>
+          <xsd:all>
             <xsd:element name="nazwa_druzyny" type="xsd:string"/>
             <xsd:element name="wygrane" type="xsd:int"/>
             <xsd:element name="przegrane" type="xsd:int"/>
-          </xsd:sequence>
+          </xsd:all>
         </xsd:complexType>
       </xsd:element>
     </xsd:sequence>
@@ -61,7 +61,7 @@
       <xsd:complexType>
         <xsd:sequence>
           <xsd:element name="imie_i_nazwisko" type="xsd:string"/>
-          <xsd:element name="pochodzenie" type="pochodzenie_typ"/>
+          <xsd:element name="pochodzenie" type="xsd:string"/>
           <xsd:element name="rok_draftu" type="rok_draftu_typ"/>
           <xsd:element name="druzyna_draftu" type="xsd:string"/>
         </xsd:sequence>
@@ -86,8 +86,8 @@
     <xsd:element name="iom" minOccurs="1" maxOccurs="unbounded">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="druzyna" type="xsd:string"/>
-          <xsd:element name="rok_mistrzostwa" type="rokMistrzostwa_typ"/>
+          <xsd:element name="druzyna" type="druzyna_typ"/>
+          <xsd:element name="rok_mistrzostwa" type="xsd:integer"/>
         </xsd:sequence>
       </xsd:complexType>
     </xsd:element>
@@ -107,6 +107,7 @@
   </xsd:simpleType>
   <xsd:simpleType name="rok_draftu_typ">
     <xsd:restriction base="xsd:integer">
+	  <xsd:totalDigits value="4"/>
       <xsd:minInclusive value="1946"/>
       <xsd:maxInclusive value="2016"/>
     </xsd:restriction>
@@ -118,24 +119,18 @@
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:simpleType name="numer_typ">
-    <xsd:restriction base="xsd:integer">
-      <xsd:minInclusive value="0"/>
+    <xsd:restriction base="xsd:positiveInteger">
+      <xsd:minInclusive value="1"/>
       <xsd:maxExclusive value="100"/>
     </xsd:restriction>
-	  <xsd:simpleType name="rokMistrzostwa_typ">
+	  </xsd:simpleType>
+
+	  <xsd:simpleType name="druzyna_typ">
     <xsd:restriction base="xsd:string">
-           <xs:pattern value="[A-Z]{3,3}"/>	 
+	 <xsd:length value="3"/>
+           <xsd:pattern value="[A-Z]{3,3}"/>	 
     </xsd:restriction>
   </xsd:simpleType>
   
-  <xsd:simpleType name="pochodzenie_typ">
-	 <xs:choice minOccurs="1" maxOccurs="1">
-  <xs:element ref="Europa"/>
-    <xs:element ref="Afryka"/>
-  <xs:element ref="USA"/>
-  <xs:element ref="Australia"/>
-    </xs:choice>
-    </xsd:restriction>
-  </xsd:simpleType>
   
 </xsd:schema>
