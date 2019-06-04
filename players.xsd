@@ -86,8 +86,8 @@
     <xsd:element name="iom" minOccurs="1" maxOccurs="unbounded">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="druzyna" type="druzyna_typ"/>
-          <xsd:element name="rok_mistrzostwa" type="xsd:int"/>
+          <xsd:element name="druzyna" type="xsd:string"/>
+          <xsd:element name="rok_mistrzostwa" type="rokMistrzostwa_typ"/>
         </xsd:sequence>
       </xsd:complexType>
     </xsd:element>
@@ -122,14 +122,14 @@
       <xsd:minInclusive value="0"/>
       <xsd:maxExclusive value="100"/>
     </xsd:restriction>
-	  <xsd:simpleType name="druzyna_typ">
+	  <xsd:simpleType name="rokMistrzostwa_typ">
     <xsd:restriction base="xsd:string">
-           <xs:pattern value="[a-z]{3,3}"/>	 
+           <xs:pattern value="[A-Z]{3,3}"/>	 
     </xsd:restriction>
   </xsd:simpleType>
   
   <xsd:simpleType name="pochodzenie_typ">
-    <xs:choice>
+	 <xs:choice minOccurs="1" maxOccurs="1">
   <xs:element ref="Europa"/>
     <xs:element ref="Afryka"/>
   <xs:element ref="USA"/>
