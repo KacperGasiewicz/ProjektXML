@@ -62,7 +62,7 @@
         <xsd:sequence>
           <xsd:element name="imie_i_nazwisko" type="xsd:string"/>
           <xsd:element name="pochodzenie" type="xsd:string"/>
-          <xsd:element name="rok_draftu" type="rok_draftu_typ"/>
+          <xsd:element name="rok_draftu1" type="rok_draftu1_typ"/>
           <xsd:element name="druzyna_draftu" type="xsd:string"/>
         </xsd:sequence>
       </xsd:complexType>
@@ -105,7 +105,7 @@
       <xsd:maxExclusive value="25"/>
     </xsd:restriction>
   </xsd:simpleType>
-  <xsd:simpleType name="rok_draftu_typ">
+  <xsd:simpleType name="rok_draftu1_typ">
     <xsd:restriction base="xsd:integer">
 	  <xsd:totalDigits value="4"/>
       <xsd:minInclusive value="1946"/>
@@ -124,13 +124,10 @@
       <xsd:maxExclusive value="100"/>
     </xsd:restriction>
 	  </xsd:simpleType>
-
 	  <xsd:simpleType name="druzyna_typ">
     <xsd:restriction base="xsd:string">
 	 <xsd:length value="3"/>
            <xsd:pattern value="[A-Z]{3,3}"/>	 
     </xsd:restriction>
-  </xsd:simpleType>
-  
-  
+  </xsd:simpleType> 
 </xsd:schema>

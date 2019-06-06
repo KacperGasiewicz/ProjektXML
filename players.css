@@ -1,52 +1,115 @@
 informacje_o_druzynie{
-	display: block;
-  margin: 2em 1em;
-  border: 4px solid #cdf;
-  padding: 0px 1em;
-  background-color: white;
+	font-weight: lighter;
+	width: auto;
+	float:left; display:inline;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
 }
 
+team,miasto,dywizja,Najlepszy_Gracz,numer,dataDolaczenia,zarobki{
+display: block;
+font-weight: bold;
+
+}
 statystyki_graczy{
-	display: block;
-  margin: 2em 1em;
-  border: 4px solid #cdf;
-  padding: 1em 1em;
-  background-color: white;
+	counter-reset: player;
+	width: auto;
+	float:left; display:inline;
+    border-style: solid;		margin-bottom:10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
+
 }
 
+/*staty start*/
+staty{
+vertical-align: middle  width: auto;
+    display: block;
+    text-align: left;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
+	position: relative;
+}
+czyPlayoffy, punkty_na_mecz, zbiorki_na_mecz, asysty_na_mecz{
+display: block;
+font-weight: bold;
+}
+czyPlayoffy::before{content:"Player is in playoffs: "}
+punkty_na_mecz::before{content:"points per game: "}
+zbiorki_na_mecz::before{content:"rebounds per game: "}
+asysty_na_mecz::before{content:"assists per game:  "}
+staty::before {
+  counter-increment: player;
+  content: "Player " counter(player) ": ";
+  font-family: Arial;
+}
+/*staty start*/
 
 statystyki_druzyny{
-	display: block;
-  margin: 2em 1em;
-  border: 4px solid #cdf;
-  padding: 0px 1em;
-  background-color: white;
+width: auto;
+float:left; display:inline;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
 }
-
+staty2{
+	vertical-align: middle  width: auto;
+    display: block;
+    text-align: left;
+    border-style: solid;
+	margin-bottom:10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
+	position: relative;
+	
+}
+nazwa_druzyny,wygrane,przegrane{font-weight: bold;display: block;}
 
 gracze{
-	
-	display: block;
-  margin: 2em 1em;
-  border: 4px solid #cdf;
-  padding: 0px 1em;
-  background-color: white;	
+	width: auto;
+float:left; display:inline;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
+}
+gracz{
 	
 }
+imie_i_nazwisko,pochodzenie,rok_draftu1,druzyna_draftu{display: block;}
 informacje_o_drafcie{
-	display: block;
-  margin: 2em 1em;
-  border: 4px solid #cdf;
-  padding: 0px 1em;
-  background-color: white;
+	width: auto;
+    display: inline-block;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
 }
 informajcje_o_mistrzostwach{
-		display: block;
-  margin: 2em 1em;
-  border: 4px solid #cdf;
-  padding: 0px 1em;
-  background-color: white;
+	width: auto;
+    display: inline-block;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
 }
+
+
 
 
 
