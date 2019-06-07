@@ -31,7 +31,7 @@
     <xsd:element name="staty" minOccurs="0" maxOccurs="unbounded">
       <xsd:complexType>
         <xsd:sequence>
-          <xsd:element name="gracz" type="xsd:string"/>
+          <xsd:element name="gracz1" type="xsd:string"/>
 		   <xsd:element name="czyPlayoffy" type="xsd:boolean"/>
           <xsd:element name="punkty_na_mecz" type="xsd:float"/>
           <xsd:element name="zbiorki_na_mecz" type="zbiorki_na_mecz_typ"/>

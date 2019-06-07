@@ -6,7 +6,17 @@ informacje_o_druzynie{
     margin-top: 10px;
     padding: 5px;
     background-color: #8D6D9D;
+
 }
+
+informacje_o_druzynie:hover{
+background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 2%, rgba(158,82,179,1) 25%, rgba(252,70,107,1) 100%);
+}
+NBA{
+background: rgb(223,174,48);
+background: linear-gradient(90deg, rgba(223,174,48,1) 22%, rgba(220,243,26,1) 48%, rgba(0,212,255,1) 81%);}
+
 team,miasto,dywizja,Najlepszy_Gracz,numer,dataDolaczenia,zarobki{
 display: block;}
 team::before{content:"Drużyna: ";font-weight: bold;}
@@ -27,6 +37,8 @@ statystyki_graczy{
     padding: 5px;
     background-color: #8D6D9D;
 }
+statystyki_graczy:hover{background: rgb(85,48,223);
+background: linear-gradient(90deg, rgba(85,48,223,1) 22%, rgba(26,243,54,1) 48%, rgba(0,212,255,1) 81%);}
 /*staty start*/
 staty{
 vertical-align: middle;  width: auto;
@@ -51,6 +63,11 @@ staty::before {
   counter-increment: player;
   content: "Player " counter(player) ": ";
   font-family: Arial;
+  text-decoration: underline;
+
+}
+
+gracz1{text-decoration: underline;
 }
 /*staty start*/
 
@@ -139,6 +156,10 @@ vertical-align: middle;  width: auto;
     padding: 5px;
     background-color: #8D6D9D;
 	position: relative;
+}
+
+informajcje_o_mistrzostwach:hover{
+	cursor: not-allowed;
 }
 druzyna,rok_mistrzostwa {display:block;	margin-right: 50px;}
 druzyna::before{content:"Drużyna: ";font-weight: bold;}
