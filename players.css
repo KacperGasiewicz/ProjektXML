@@ -1,5 +1,4 @@
 informacje_o_druzynie{
-	font-weight: lighter;
 	width: auto;
 	float:left; display:inline;
     border-style: solid;
@@ -8,12 +7,16 @@ informacje_o_druzynie{
     padding: 5px;
     background-color: #8D6D9D;
 }
-
 team,miasto,dywizja,Najlepszy_Gracz,numer,dataDolaczenia,zarobki{
-display: block;
-font-weight: bold;
+display: block;}
+team::before{content:"Drużyna: ";font-weight: bold;}
+miasto::before{content:"Miasto: ";font-weight: bold;}
+dywizja::before{content:"Dywizja: ";font-weight: bold;}
+Najlepszy_Gracz::before{content:"Najlepszy_Gracz: ";font-weight: bold;}
+numer::before{content:"numer: ";font-weight: bold;}
+dataDolaczenia::before{content:"data dolaczenia do ligii: ";font-weight: bold;}
+zarobki::before{content:"zarobki: ";font-weight: bold;}
 
-}
 statystyki_graczy{
 	counter-reset: player;
 	width: auto;
@@ -23,12 +26,10 @@ statystyki_graczy{
     margin-top: 10px;
     padding: 5px;
     background-color: #8D6D9D;
-
 }
-
 /*staty start*/
 staty{
-vertical-align: middle  width: auto;
+vertical-align: middle;  width: auto;
     display: block;
     text-align: left;
     border-style: solid;
@@ -63,7 +64,7 @@ float:left; display:inline;
     background-color: #8D6D9D;
 }
 staty2{
-	vertical-align: middle  width: auto;
+	vertical-align: middle ; width: auto;
     display: block;
     text-align: left;
     border-style: solid;
@@ -72,26 +73,16 @@ staty2{
     margin-top: 10px;
     padding: 5px;
     background-color: #8D6D9D;
-	position: relative;
 	
 }
-nazwa_druzyny,wygrane,przegrane{font-weight: bold;display: block;}
+nazwa_druzyny,wygrane,przegrane{display: block;}
+nazwa_druzyny::before{content:"Nazwa: ";font-weight: bold;}
+wygrane::before{content:"ilość wygranych: ";font-weight: bold;}
+przegrane::before{content:"ilość przegranych: ";font-weight: bold;}
+
 
 gracze{
-	width: auto;
-float:left; display:inline;
-    border-style: solid;
-    margin-left: 10px;
-    margin-top: 10px;
-    padding: 5px;
-    background-color: #8D6D9D;
-}
-gracz{
-	
-}
-imie_i_nazwisko,pochodzenie,rok_draftu1,druzyna_draftu{display: block;}
-informacje_o_drafcie{
-	width: auto;
+		width: auto;
     display: inline-block;
     border-style: solid;
     margin-left: 10px;
@@ -99,6 +90,36 @@ informacje_o_drafcie{
     padding: 5px;
     background-color: #8D6D9D;
 }
+
+imie_i_nazwisko,pochodzenie,rok_draftu1,druzyna_draftu{display: block;}
+rok_draftu,nr1{display: block;}
+imie_i_nazwisko::before{content:"Gracz: ";font-weight: bold;}
+pochodzenie::before{content:"Pochodzenie: ";font-weight: bold;}
+rok_draftu1::before{content:"Rok draftu: ";font-weight: bold;}
+druzyna_draftu::before{content:"druzyna draftu: ";font-weight: bold;}
+
+informacje_o_drafcie{
+		width: auto;
+    display: inline-block;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
+}
+drafty{	width: auto;
+    display: block;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 25px;
+    padding: 5px;
+    background-color: #8D6D9D;
+	}
+rok_draftu::before{content:"Rok draftu: "; font-weight: bold;}
+nr1::before{content:"Pierwszy pick draftu: "; font-weight: bold;}
+
+
+
 informajcje_o_mistrzostwach{
 	width: auto;
     display: inline-block;
@@ -108,9 +129,20 @@ informajcje_o_mistrzostwach{
     padding: 5px;
     background-color: #8D6D9D;
 }
-
-
-
+iom{
+vertical-align: middle;  width: auto;
+    display: block;
+    text-align: left;
+    border-style: solid;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding: 5px;
+    background-color: #8D6D9D;
+	position: relative;
+}
+druzyna,rok_mistrzostwa {display:block;	margin-right: 50px;}
+druzyna::before{content:"Drużyna: ";font-weight: bold;}
+rok_mistrzostwa::before{content:"Rok mistrzostwa: ";font-weight: bold;}
 
 
 

@@ -61,13 +61,13 @@
     <gracz>
       <imie_i_nazwisko>Marcin Gortat</imie_i_nazwisko>
       <pochodzenie>Europa</pochodzenie>
-      <rok_draftu>2005</rok_draftu>
+      <rok_draftu1>2005</rok_draftu1>
       <druzyna_draftu>Orlando Magic</druzyna_draftu>
     </gracz>
     <gracz>
       <imie_i_nazwisko>Joel Embiid</imie_i_nazwisko>
       <pochodzenie>Afryka</pochodzenie>
-      <rok_draftu1>2014</rok_draftu1>
+      <rok_draftu1	>2014</rok_draftu1>
       <druzyna_draftu>Philadelphia 76'ers</druzyna_draftu>
     </gracz>
   </gracze>
@@ -85,6 +85,10 @@
     <iom>
       <druzyna>LAL</druzyna>
       <rok_mistrzostwa>2010</rok_mistrzostwa>
+    </iom>
+	<iom>
+      <druzyna>GSW</druzyna>
+      <rok_mistrzostwa>2017</rok_mistrzostwa>
     </iom>
   </informajcje_o_mistrzostwach>
 </NBA>
