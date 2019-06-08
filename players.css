@@ -40,6 +40,8 @@ statystyki_graczy{
 statystyki_graczy:hover{background: rgb(85,48,223);
 background: linear-gradient(90deg, rgba(85,48,223,1) 22%, rgba(26,243,54,1) 48%, rgba(0,212,255,1) 81%);}
 /*staty start*/
+statystyki_druzyny:hover{background: rgb(29,158,253);
+background: linear-gradient(90deg, rgba(29,158,253,1) 25%, rgba(62,246,253,1) 75%);}
 staty{
 vertical-align: middle;  width: auto;
     display: block;
@@ -67,8 +69,7 @@ staty::before {
 
 }
 
-gracz1{text-decoration: underline;
-}
+gracz1{text-decoration: underline;}
 /*staty start*/
 
 statystyki_druzyny{
@@ -108,6 +109,8 @@ gracze{
     background-color: #8D6D9D;
 }
 
+gracze:hover{background: rgb(253,145,29);
+background: linear-gradient(90deg, rgba(253,145,29,1) 25%, rgba(239,105,253,1) 53%, rgba(106,62,253,1) 79%);}
 imie_i_nazwisko,pochodzenie,rok_draftu1,druzyna_draftu{display: block;}
 rok_draftu,nr1{display: block;}
 imie_i_nazwisko::before{content:"Gracz: ";font-weight: bold;}
@@ -124,6 +127,8 @@ informacje_o_drafcie{
     padding: 5px;
     background-color: #8D6D9D;
 }
+informacje_o_drafcie:hover{background: rgb(253,29,79);
+background: linear-gradient(180deg, rgba(253,29,79,1) 25%, rgba(253,244,105,1) 53%, rgba(62,246,253,1) 79%);}
 drafty{	width: auto;
     display: block;
     border-style: solid;
